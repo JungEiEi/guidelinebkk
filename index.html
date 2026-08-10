@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Discover Bangkok | Asia Hotel Bangkok</title>
+
+    <style>
+      /* =========================================================
+       RESET
+    ========================================================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: #f7ead3;
+        color: #45192a;
+      }
+
+      /* =========================================================
+       SECTION 1 : HERO
+    ========================================================= */
+
+      .hero {
+        width: 100%;
+        min-height: 100vh;
+        background: #ad120b;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 55px 60px 30px;
+      }
+
+      .hero-logo {
+        width: 210px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin-bottom: 75px;
+      }
+
+      .hero-box {
+        width: 100%;
+        min-height: 600px;
+
+        background: #bd5c50;
+        border: 7px solid rgba(223, 111, 99, 0.55);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        padding: 70px 30px;
+      }
+
+      .hero-title {
+        color: #fffaf2;
+
+        font-size: clamp(48px, 5vw, 82px);
+        font-weight: 400;
+
+        letter-spacing: 1px;
+        line-height: 1.1;
+
+        margin-bottom: 90px;
+      }
+
+      .diamond-line {
+        position: relative;
+
+        width: 390px;
+        max-width: 55%;
+        height: 4px;
+
+        background: #efb1ad;
+
+        margin-bottom: 85px;
+      }
+
+      .diamond-line::before,
+      .diamond-line::after {
+        content: "";
+
+        position: absolute;
+        top: 50%;
+
+        width: 10px;
+        height: 10px;
+
+        background: #bd5c50;
+        border: 4px solid #efb1ad;
+
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .diamond-line::before {
+        left: -7px;
+      }
+
+      .diamond-line::after {
+        right: -7px;
+      }
+
+      .hero-subtitle {
+        color: #fffaf2;
+
+        font-size: clamp(28px, 2.5vw, 42px);
+        font-weight: 400;
+
+        letter-spacing: 0.5px;
+      }
+
+      /* =========================================================
+       SECTION 2 : MAIN VIDEO
+    ========================================================= */
+
+      .video-section {
+        position: relative;
+
+        width: 100%;
+        height: 100vh;
+
+        background: #000;
+        overflow: hidden;
+      }
+
+      .video-section video {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+        object-position: center;
+      }
+
+      /* =========================================================
+       SHARED BANGKOK BACKGROUND
+    ========================================================= */
+
+      .bangkok-section {
+        position: relative;
+
+        width: 100%;
+
+        background-color: #f8ead2;
+
+        overflow: hidden;
+
+        padding-bottom: 60px;
+      }
+
+      .bangkok-section::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        pointer-events: none;
+
+        opacity: 0.12;
+
+        background-image:
+          linear-gradient(90deg, rgba(130, 86, 55, 0.24) 1px, transparent 1px),
+          linear-gradient(rgba(130, 86, 55, 0.18) 1px, transparent 1px);
+
+        background-size: 85px 85px;
+      }
+
+      .bangkok-content {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+      }
+
+      /* =========================================================
+       SECTION 3 : OPENING OVERVIEW
+    ========================================================= */
+
+      .overview-header {
+        text-align: center;
+        padding: 10px 40px 0;
+      }
+
+      .overview-header h2 {
+        color: #421529;
+
+        font-size: clamp(30px, 3vw, 43px);
+        font-weight: 700;
+
+        letter-spacing: 3px;
+
+        padding-bottom: 12px;
+
+        border-bottom: 1px solid rgba(91, 43, 51, 0.6);
+      }
+
+      .overview-text {
+        max-width: 1350px;
+
+        margin: 0 auto;
+
+        padding: 24px 50px 27px;
+
+        text-align: center;
+
+        color: #4c2029;
+
+        font-size: clamp(18px, 2vw, 28px);
+        line-height: 1.25;
+      }
+
+      .heritage-title {
+        width: 100%;
+
+        background: #ad120b;
+        color: #fff4df;
+
+        text-align: center;
+
+        font-size: clamp(30px, 4vw, 50px);
+        font-weight: bold;
+
+        padding: 14px 20px;
+
+        line-height: 1.15;
+      }
+
+      .rattanakosin-title {
+        text-align: center;
+
+        color: #4b1c2d;
+
+        font-size: clamp(24px, 2.5vw, 34px);
+        font-weight: bold;
+
+        margin: 21px 20px 14px;
+      }
+
+      .temple-images {
+        width: 94%;
+
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 26px;
+      }
+
+      .temple-image-wrapper {
+        width: 100%;
+        height: 460px;
+
+        overflow: hidden;
+      }
+
+      .temple-image-wrapper img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+
+        transition: transform 0.5s ease;
+      }
+
+      .temple-image-wrapper:hover img {
+        transform: scale(1.03);
+      }
+
+      .grand-palace-title {
+        width: 100%;
+
+        margin-top: 50px;
+
+        background: #ad120b;
+        color: #fff4df;
+
+        text-align: center;
+
+        font-size: clamp(25px, 2.8vw, 34px);
+        font-weight: bold;
+
+        letter-spacing: 1px;
+
+        padding: 12px 20px;
+      }
+
+      .grand-palace-description {
+        width: 92%;
+        max-width: 1400px;
+
+        margin: 0 auto;
+
+        padding: 45px 20px 25px;
+
+        color: #4b202b;
+
+        font-size: clamp(18px, 1.85vw, 27px);
+        line-height: 1.3;
+
+        text-align: left;
+      }
+
+      /* =========================================================
+       SECTION 4 : GOLDEN MOUNT
+    ========================================================= */
+
+      .golden-mount {
+        position: relative;
+
+        width: 100%;
+
+        z-index: 2;
+
+        padding-bottom: 45px;
+      }
+
+      .golden-mount-title {
+        width: 100%;
+
+        background: #ad120b;
+        color: #fff4df;
+
+        text-align: center;
+
+        font-size: clamp(27px, 3vw, 38px);
+        font-weight: bold;
+
+        padding: 12px 20px;
+
+        line-height: 1.2;
+      }
+
+      .golden-mount-description {
+        width: 92%;
+        max-width: 1450px;
+
+        margin: 0 auto;
+
+        padding: 55px 20px 65px;
+
+        color: #4b202b;
+
+        font-size: clamp(18px, 1.9vw, 29px);
+        line-height: 1.28;
+
+        text-align: left;
+      }
+
+      .golden-mount-images {
+        width: 94%;
+
+        margin: 0 auto;
+
+        display: grid;
+
+        grid-template-columns: 1.7fr 0.95fr;
+
+        gap: 32px;
+      }
+
+      .golden-image {
+        width: 100%;
+        height: 500px;
+
+        overflow: hidden;
+      }
+
+      .golden-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+      }
+
+      .golden-image:hover img {
+        transform: scale(1.03);
+      }
+
+      /* =========================================================
+       SECTION 5 : WAT ARUN
+    ========================================================= */
+
+      .wat-arun {
+        position: relative;
+
+        width: 100%;
+
+        z-index: 2;
+
+        padding-bottom: 10px;
+      }
+
+      /* TITLE */
+
+      .wat-arun-title {
+        width: 100%;
+
+        background: #ad120b;
+        color: #fff4df;
+
+        text-align: center;
+
+        font-size: clamp(27px, 3vw, 38px);
+        font-weight: bold;
+
+        padding: 12px 20px;
+
+        line-height: 1.2;
+      }
+
+      /* DESCRIPTION */
+
+      .wat-arun-description {
+        width: 92%;
+        max-width: 1450px;
+
+        margin: 0 auto;
+
+        padding: 20px 20px 30px;
+
+        color: #4b202b;
+
+        font-size: clamp(18px, 1.85vw, 27px);
+        line-height: 1.3;
+
+        text-align: left;
+      }
+
+      /* VIDEO + IMAGE */
+
+      .wat-arun-media {
+        width: 94%;
+
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 32px;
+      }
+
+      .wat-arun-media-box {
+        width: 100%;
+        height: 720px;
+
+        overflow: hidden;
+
+        background: #000;
+      }
+
+      .wat-arun-media-box video,
+      .wat-arun-media-box img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .wat-arun-media-box img {
+        transition: transform 0.5s ease;
+      }
+
+      .wat-arun-media-box:hover img {
+        transform: scale(1.03);
+      }
+
+      /* =========================================================
+       TABLET
+    ========================================================= */
+
+      @media (max-width: 992px) {
+        .hero {
+          padding: 40px 30px 25px;
+        }
+
+        .hero-logo {
+          width: 170px;
+          margin-bottom: 55px;
+        }
+
+        .hero-box {
+          min-height: 520px;
+        }
+
+        .hero-title {
+          margin-bottom: 70px;
+        }
+
+        .diamond-line {
+          width: 330px;
+          margin-bottom: 65px;
+        }
+
+        .overview-text {
+          padding-left: 35px;
+          padding-right: 35px;
+        }
+
+        .temple-images {
+          width: 92%;
+          gap: 15px;
+        }
+
+        .temple-image-wrapper {
+          height: 360px;
+        }
+
+        .grand-palace-description {
+          width: 94%;
+        }
+
+        .golden-mount-description {
+          width: 94%;
+
+          padding-top: 45px;
+          padding-bottom: 50px;
+        }
+
+        .golden-mount-images {
+          width: 92%;
+
+          gap: 18px;
+        }
+
+        .golden-image {
+          height: 400px;
+        }
+
+        /* WAT ARUN */
+
+        .wat-arun-description {
+          width: 94%;
+        }
+
+        .wat-arun-media {
+          width: 92%;
+
+          gap: 18px;
+        }
+
+        .wat-arun-media-box {
+          height: 520px;
+        }
+      }
+
+      /* =========================================================
+       MOBILE
+    ========================================================= */
+
+      @media (max-width: 600px) {
+        .hero {
+          min-height: auto;
+
+          padding: 30px 18px 20px;
+        }
+
+        .hero-logo {
+          width: 135px;
+
+          margin-bottom: 40px;
+        }
+
+        .hero-box {
+          min-height: 430px;
+
+          border-width: 4px;
+
+          padding: 50px 20px;
+        }
+
+        .hero-title {
+          font-size: 38px;
+
+          margin-bottom: 55px;
+        }
+
+        .diamond-line {
+          width: 220px;
+          max-width: 75%;
+
+          height: 3px;
+
+          margin-bottom: 50px;
+        }
+
+        .diamond-line::before,
+        .diamond-line::after {
+          width: 8px;
+          height: 8px;
+
+          border-width: 3px;
+        }
+
+        .hero-subtitle {
+          font-size: 25px;
+        }
+
+        .video-section {
+          height: 60vh;
+        }
+
+        .overview-header {
+          padding: 18px 15px 0;
+        }
+
+        .overview-header h2 {
+          font-size: 27px;
+
+          letter-spacing: 2px;
+        }
+
+        .overview-text {
+          padding: 18px 22px 24px;
+
+          font-size: 17px;
+
+          line-height: 1.4;
+        }
+
+        .heritage-title {
+          font-size: 29px;
+
+          padding: 14px;
+        }
+
+        .rattanakosin-title {
+          font-size: 22px;
+
+          margin-top: 20px;
+        }
+
+        .temple-images {
+          width: 90%;
+
+          grid-template-columns: 1fr;
+
+          gap: 16px;
+        }
+
+        .temple-image-wrapper {
+          height: 280px;
+        }
+
+        .grand-palace-title {
+          margin-top: 30px;
+
+          font-size: 24px;
+
+          padding: 13px 15px;
+        }
+
+        .grand-palace-description {
+          width: 90%;
+
+          padding: 28px 0 35px;
+
+          font-size: 17px;
+
+          line-height: 1.5;
+        }
+
+        .golden-mount-title {
+          font-size: 24px;
+
+          padding: 14px 12px;
+        }
+
+        .golden-mount-description {
+          width: 90%;
+
+          padding: 30px 0 35px;
+
+          font-size: 17px;
+
+          line-height: 1.5;
+        }
+
+        .golden-mount-images {
+          width: 90%;
+
+          grid-template-columns: 1fr;
+
+          gap: 16px;
+        }
+
+        .golden-image {
+          height: 280px;
+        }
+
+        /* WAT ARUN MOBILE */
+
+        .wat-arun-title {
+          font-size: 24px;
+
+          padding: 14px 12px;
+        }
+
+        .wat-arun-description {
+          width: 90%;
+
+          padding: 28px 0 30px;
+
+          font-size: 17px;
+
+          line-height: 1.5;
+        }
+
+        .wat-arun-media {
+          width: 90%;
+
+          grid-template-columns: 1fr;
+
+          gap: 16px;
+        }
+
+        .wat-arun-media-box {
+          height: 360px;
+        }
+      }
+
+      /* =========================================================
+   SECTION 6 : TEMPLE ETIQUETTE
+========================================================= */
+
+      .temple-etiquette {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+
+        padding: 55px 7% 70px;
+
+        background: #f8ead2;
+
+        color: #222;
+      }
+
+      /* =========================================================
+   TITLE
+========================================================= */
+
+      .etiquette-heading {
+        text-align: center;
+
+        margin-bottom: 45px;
+      }
+
+      .etiquette-symbol {
+        font-size: 40px;
+
+        color: #633b51;
+
+        line-height: 1;
+
+        margin-bottom: 6px;
+      }
+
+      .etiquette-heading h2 {
+        color: #45192a;
+
+        font-size: clamp(34px, 4vw, 53px);
+
+        font-weight: bold;
+
+        letter-spacing: 6px;
+
+        text-transform: uppercase;
+      }
+
+      /* เส้นตกแต่งใต้หัวข้อ */
+
+      .etiquette-divider {
+        width: 470px;
+        max-width: 70%;
+
+        height: 2px;
+
+        background: #8d6677;
+
+        margin: 14px auto 0;
+
+        position: relative;
+      }
+
+      .etiquette-divider::after {
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        width: 11px;
+        height: 11px;
+
+        background: #755064;
+
+        transform: translate(-50%, -50%) rotate(45deg);
+
+        box-shadow:
+          20px 0 0 13px #f8ead2,
+          -20px 0 0 13px #f8ead2;
+      }
+
+      /* =========================================================
+   TWO COLUMNS
+========================================================= */
+
+      .etiquette-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 80px;
+      }
+
+      .etiquette-column {
+        width: 100%;
+      }
+
+      /* =========================================================
+   ITEM
+========================================================= */
+
+      .etiquette-item {
+        min-height: 125px;
+
+        display: grid;
+
+        grid-template-columns: 115px 1fr;
+
+        align-items: center;
+
+        gap: 30px;
+
+        padding: 15px 0;
+
+        border-bottom: 2px solid rgba(35, 35, 35, 0.7);
+      }
+
+      /* =========================================================
+   NORMAL ICON
+========================================================= */
+
+      .etiquette-icon {
+        position: relative;
+
+        width: 92px;
+        height: 92px;
+
+        border: 2px solid #222;
+        border-radius: 50%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        font-size: 46px;
+
+        line-height: 1;
+
+        margin: 0 auto;
+      }
+
+      /* =========================================================
+   RED PROHIBITION ICON
+========================================================= */
+
+      .etiquette-icon.no {
+        border: 7px solid #ff0707;
+      }
+
+      /* เส้นแดงเฉียง */
+
+      .etiquette-icon.no::after {
+        content: "";
+
+        position: absolute;
+
+        width: 108%;
+        height: 7px;
+
+        background: #ff0707;
+
+        left: -4%;
+        top: 50%;
+
+        transform: rotate(-45deg);
+
+        border-radius: 5px;
+
+        z-index: 4;
+      }
+
+      /* =========================================================
+   CUSTOM SIMPLE ICONS
+========================================================= */
+
+      .icon-clothes {
+        font-size: 40px;
+      }
+
+      .icon-shoes {
+        font-size: 43px;
+      }
+
+      .icon-quiet {
+        font-size: 39px;
+      }
+
+      .icon-buddha {
+        font-size: 44px;
+      }
+
+      .icon-camera {
+        font-size: 42px;
+      }
+
+      /* =========================================================
+   TEXT
+========================================================= */
+
+      .etiquette-text {
+        font-size: clamp(22px, 2.15vw, 34px);
+
+        font-weight: bold;
+
+        line-height: 1.15;
+
+        color: #292929;
+      }
+
+      /* =========================================================
+   TABLET
+========================================================= */
+
+      @media (max-width: 992px) {
+        .temple-etiquette {
+          padding: 50px 5% 60px;
+        }
+
+        .etiquette-grid {
+          gap: 35px;
+        }
+
+        .etiquette-item {
+          grid-template-columns:
+            85px
+            1fr;
+
+          gap: 20px;
+
+          min-height: 110px;
+        }
+
+        .etiquette-icon {
+          width: 75px;
+          height: 75px;
+
+          font-size: 36px;
+        }
+
+        .etiquette-text {
+          font-size: 22px;
+        }
+      }
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 650px) {
+        .temple-etiquette {
+          padding: 40px 7% 50px;
+        }
+
+        .etiquette-symbol {
+          font-size: 31px;
+        }
+
+        .etiquette-heading h2 {
+          font-size: 29px;
+
+          letter-spacing: 3px;
+        }
+
+        .etiquette-divider {
+          width: 260px;
+        }
+
+        /* เปลี่ยนจาก 2 คอลัมน์เป็น 1 */
+
+        .etiquette-grid {
+          grid-template-columns: 1fr;
+
+          gap: 0;
+        }
+
+        .etiquette-item {
+          grid-template-columns:
+            75px
+            1fr;
+
+          gap: 18px;
+
+          min-height: 100px;
+        }
+
+        .etiquette-icon {
+          width: 66px;
+          height: 66px;
+
+          font-size: 31px;
+        }
+
+        .etiquette-icon.no {
+          border-width: 5px;
+        }
+
+        .etiquette-icon.no::after {
+          height: 5px;
+        }
+
+        .etiquette-text {
+          font-size: 19px;
+
+          line-height: 1.25;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+       SECTION 1 : HERO
+  ========================================================== -->
+
+    <section class="hero">
+      <img src="assets/logo.png" alt="Asia Hotel Bangkok" class="hero-logo" />
+
+      <div class="hero-box">
+        <h1 class="hero-title">DISCOVER BANGKOK</h1>
+
+        <div class="diamond-line"></div>
+
+        <p class="hero-subtitle">Hotel Guest Guide</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       SECTION 2 : WAT PHRA KAEW VIDEO
+  ========================================================== -->
+
+    <section class="video-section">
+      <video
+        id="watprakaewVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="assets/watprakaew.mp4" type="video/mp4" />
+
+        Your browser does not support HTML video.
+      </video>
+    </section>
+
+    <!-- =========================================================
+       BANGKOK CONTENT
+  ========================================================== -->
+
+    <section class="bangkok-section">
+      <div class="bangkok-content">
+        <!-- =======================================================
+           OPENING OVERVIEW
+      ======================================================== -->
+
+        <div class="overview-header">
+          <h2>Opening Overview</h2>
+        </div>
+
+        <p class="overview-text">
+          Bangkok is a dynamic capital where royal history, living traditions,
+          and contemporary city life meet– welcoming, well-connected, and
+          rewarding to explore at any pace
+        </p>
+
+        <!-- =======================================================
+           HISTORICAL & CULTURAL HERITAGE
+      ======================================================== -->
+
+        <div class="heritage-title">Historical &amp; Cultural Heritage</div>
+
+        <h3 class="rattanakosin-title">Rattanakosin : The Soul of Thailand</h3>
+
+        <!-- W1 + W2 -->
+
+        <div class="temple-images">
+          <div class="temple-image-wrapper">
+            <img src="assets/w1.webp" alt="Grand Palace Bangkok" />
+          </div>
+
+          <div class="temple-image-wrapper">
+            <img src="assets/w2.webp" alt="Wat Pho Reclining Buddha" />
+          </div>
+        </div>
+
+        <!-- GRAND PALACE -->
+
+        <div class="grand-palace-title">
+          Grand Palace Bangkok / Wat Phra Kaew
+        </div>
+
+        <div class="grand-palace-description">
+          <p>
+            The Grand Palace consists of a complex of royal halls, buildings,
+            and palaces constructed in exquisite traditional Thai architecture,
+            showcasing remarkable craftsmanship and artistic detail. Within its
+            grounds is Wat Phra Si Rattana Satsadaram (the Temple of the Emerald
+            Buddha), the royal temple of the Grand Palace, which enshrines the
+            Phra Phuttha Maha Mani Rattana Patimakorn (the Emerald Buddha), the
+            most revered Buddha image and a cherished national symbol of
+            Thailand. The buildings within the Grand Palace are arranged in an
+            orderly manner, with the Inner Court clearly designated as the
+            private residential area for members of the royal family.
+          </p>
+        </div>
+
+        <!-- =======================================================
+           SECTION 4 : GOLDEN MOUNT
+      ======================================================== -->
+
+        <div class="golden-mount">
+          <div class="golden-mount-title">The Golden Mount (Wat Saket)</div>
+
+          <div class="golden-mount-description">
+            <p>
+              It is one of the city's best-known viewpoints. The artificial hill
+              was created during the reign of King Rama III. A large chedi was
+              originally planned but collapsed due to the soft ground. The hill
+              was later stabilized, and the current golden chedi was completed
+              during the reign of King Rama V. From the top, you'll get
+              panoramic views of Bangkok, especially impressive around sunrise,
+              sunset, or after rain when the air is clearer.
+            </p>
+          </div>
+
+          <div class="golden-mount-images">
+            <div class="golden-image">
+              <img
+                src="assets/w3.webp"
+                alt="The Golden Mount Wat Saket Bangkok"
+              />
+            </div>
+
+            <div class="golden-image">
+              <img src="assets/w4.webp" alt="Aerial view of Wat Saket" />
+            </div>
+          </div>
+        </div>
+
+        <!-- =======================================================
+           SECTION 5 : WAT ARUN RATCHAWARARAM
+      ======================================================== -->
+
+        <div class="wat-arun">
+          <!-- TITLE -->
+
+          <div class="wat-arun-title">Wat Arun Ratchawararam</div>
+
+          <!-- DESCRIPTION -->
+
+          <div class="wat-arun-description">
+            <p>
+              Wat Arun Ratchawararam is regarded as a center of faith and an
+              important symbol of both the Thonburi and Rattanakosin eras. The
+              temple houses an ordination hall (Ubosot) enshrining a Buddha
+              image in the Mara-Vijaya posture, along with various viharns and
+              pagodas. Its entrance gates are adorned with the famous white and
+              green guardian giants of Wat Arun, which serve as protective
+              deities and reflect the temple’s rich beliefs and artistic beauty.
+              In addition, Wat Arun is a popular destination for tourists who
+              come to admire its architectural splendor and learn about its
+              historical significance.
+            </p>
+          </div>
+
+          <!-- VIDEO + IMAGE -->
+
+          <div class="wat-arun-media">
+            <!-- LEFT VIDEO -->
+
+            <div class="wat-arun-media-box">
+              <video
+                id="watarunVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+              >
+                <source src="assets/watarun.mp4" type="video/mp4" />
+
+                Your browser does not support HTML video.
+              </video>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+
+            <div class="wat-arun-media-box">
+              <img src="assets/w5.webp" alt="Wat Arun Ratchawararam" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     SECTION 6 : TEMPLE ETIQUETTE
+========================================================== -->
+
+    <section class="temple-etiquette">
+      <!-- =========================
+       TITLE
+  ========================== -->
+
+      <div class="etiquette-heading">
+        <img src="assets/watemoji.webp" alt="">
+
+        <h2>Temple Etiquette</h2>
+
+        <div class="etiquette-divider"></div>
+      </div>
+
+      <!-- =========================
+       TWO COLUMNS
+  ========================== -->
+
+      <div class="etiquette-grid">
+        <!-- =====================================================
+         LEFT COLUMN
+    ====================================================== -->
+
+        <div class="etiquette-column">
+          <!-- 1 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon icon-clothes">👕</div>
+
+            <div class="etiquette-text">
+              Dress modestly : cover<br />
+              shoulders and knees
+            </div>
+          </div>
+
+          <!-- 2 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon icon-shoes">👟</div>
+
+            <div class="etiquette-text">
+              Remove shoes before<br />
+              entering temple<br />
+              buildings
+            </div>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon icon-quiet">🤫</div>
+
+            <div class="etiquette-text">
+              Speak quietly; keep<br />
+              phone on silent
+            </div>
+          </div>
+
+          <!-- 4 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon icon-buddha">🧘</div>
+
+            <div class="etiquette-text">
+              Show respect to<br />
+              Buddha images
+            </div>
+          </div>
+
+          <!-- 5 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon icon-camera">📷</div>
+
+            <div class="etiquette-text">
+              Follow photo rules<br />
+              and posted signs
+            </div>
+          </div>
+        </div>
+
+        <!-- =====================================================
+         RIGHT COLUMN
+    ====================================================== -->
+
+        <div class="etiquette-column">
+          <!-- 1 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon no">👚</div>
+
+            <div class="etiquette-text">
+              Do not wear<br />
+              revealing clothing
+            </div>
+          </div>
+
+          <!-- 2 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon no">🧘</div>
+
+            <div class="etiquette-text">
+              Do not touch, climb,<br />
+              or pose<br />
+              inappropriately on<br />
+              religious objects
+            </div>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon no">✋</div>
+
+            <div class="etiquette-text">
+              Do not touch<br />
+              monks; women<br />
+              should avoid<br />
+              physical contact
+            </div>
+          </div>
+
+          <!-- 4 -->
+
+          <div class="etiquette-item">
+            <div class="etiquette-icon no">📷</div>
+
+            <div class="etiquette-text">
+              Do not use flash or<br />
+              enter restricted<br />
+              areas when<br />
+              prohibited
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       VIDEO SCRIPT
+  ========================================================== -->
+
+    <script>
+      /*
+      ใช้ฟังก์ชันเดียวกับวิดีโอทุกตัว
+      เพื่อช่วย autoplay เมื่อ browser พร้อม
+    */
+
+      function startMutedVideo(videoId) {
+        const video = document.getElementById(videoId);
+
+        if (!video) {
+          return;
+        }
+
+        video.muted = true;
+
+        const playVideo = () => {
+          const promise = video.play();
+
+          if (promise !== undefined) {
+            promise.catch((error) => {
+              console.log("Autoplay waiting:", videoId, error);
+            });
+          }
+        };
+
+        window.addEventListener("load", playVideo);
+      }
+
+      startMutedVideo("watprakaewVideo");
+
+      startMutedVideo("watarunVideo");
+    </script>
+  </body>
+</html>
